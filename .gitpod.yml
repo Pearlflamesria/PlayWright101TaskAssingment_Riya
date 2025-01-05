@@ -1,0 +1,14 @@
+
+
+image:
+  file: .gitpod.Dockerfile
+
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - init: npm install && npx playwright install && npx playwright install-deps
+    command: npm run test-firefox-win-chrome-mac
+
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+ports:
+  - port: 3000
+    onOpen: open-preview

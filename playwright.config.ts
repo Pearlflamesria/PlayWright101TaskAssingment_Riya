@@ -14,71 +14,13 @@ const config: PlaywrightTestConfig = {
   },
   projects: [
     {
-      name: 'pw-chromium:latest:MacOS Catalina@lambdatest',
+      name: 'chromium',
       use: {
+        browserName: 'chromium',
+        channel: 'chrome', // Use the Chrome browser
         viewport: { width: 1920, height: 1080 },
       },
     },
-    {
-      name: 'pw-firefox:latest:MacOS Catalina@lambdatest',
-      use: {
-        viewport: { width: 1920, height: 1080 },
-      },
-    },
-    {
-      name: "pw-firefox:latest:Windows 10@lambdatest",
-      use: {
-        viewport: { width: 1920, height: 1080 },
-      },
-    },
-    {
-      name: "MicrosoftEdge:latest:macOS Mojave@lambdatest",
-      use: {
-        ...devices["iPhone 12 Pro Max"],
-      },
-    },
-    {
-      name: "pw-chromium:latest:Windows 10@lambdatest",
-      use: {
-        viewport: { width: 1920, height: 1080 },
-      },
-    },
-    {
-      name: "pw-webkit:latest:MacOS Catalina@lambdatest",
-      use: {
-        viewport: { width: 1920, height: 1080 },
-      },
-    },
-     // Config for running tests in local
-    {
-      name: "chromium",
-      use: {
-        browserName: "chromium",
-        channel: "chrome",
-        viewport: { width: 1920, height: 1080 },
-      },
-    },
-    {
-      name: "safari",
-      use: {
-        browserName: "webkit",
-        viewport: { width: 1980, height: 1080 },
-      },
-    },
-    {
-      name: "firefox",
-      use: {
-        browserName: "firefox",
-        viewport: { width: 1920, height: 1080 },
-      },
-    },
-    // // Test in mobile viewport.
-    // {
-    //   name: "chrome@pixel5",
-    //   use: {
-    //     ...devices['iPhone 12 Pro Max'],
-    //   }
-    // },
   ],
 }
 
